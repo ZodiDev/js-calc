@@ -11,10 +11,11 @@ let numberIndex = 1;
 caculation = false;
 
 onclick = function(){
-    for (let i = 0; i < number.length; i++ ){
-        document.getElementById(String(number[i].innerHTML)).onclick = function(){
+    for(let i of number){
+        console.log(i.innerHTML)
+        document.getElementById(i.innerHTML).onclick = function(){
             if(numberIndex == 1){
-                firstNumber = String(number[i].innerHTML);
+                firstNumber = i.innerHTML;
                 if(firstNumber > 0 && firstNumber <= 9){
                     numberIndex += 1;
                     document.getElementById("firstNumber").innerHTML = firstNumber;
@@ -22,7 +23,7 @@ onclick = function(){
                     window.alert("Please enter a valid number");
                 }
             }else if(numberIndex == 2){
-                operator = String(number[i].innerHTML);
+                operator = i.innerHTML;
                 if(operator == "+" || operator == "-" || operator == "*"){
                     document.getElementById("operator").innerHTML = operator;
                     numberIndex += 1;
@@ -30,7 +31,7 @@ onclick = function(){
                     window.alert("Please enter a valid operator");
                 }
             }else if(numberIndex == 3){
-                secondNumber = String(number[i].innerHTML);
+                secondNumber = i.innerHTML;
                 if(secondNumber > 0 && secondNumber <= 9){
                     numberIndex += 1;
                     document.getElementById("secondNumber").innerHTML = secondNumber;
@@ -40,7 +41,8 @@ onclick = function(){
             }
         }
     }
-}
+    }
+
 
 document.getElementById("submitBtn").onclick = function(){
     if(operator == "+"){
