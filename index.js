@@ -3,28 +3,30 @@ let firstNumber = "";
 let secondNumber = "";
 let operator = "";
 
+numbers = document.querySelectorAll(".number");
+
 let result;
 
 let numberIndex = 1;
 
-function numberClick(clicked_number){
-    if(numberIndex == 1){
-        firstNumber = clicked_number
-        document.getElementById("firstNumber").innerHTML = clicked_number;
+numbers.forEach(number => number.addEventListener("click", () =>{
+    if (numberIndex == 1){
+        firstNumber = number.textContent;
+        document.getElementById("firstNumber").textContent = number.textContent;
         numberIndex += 1
-    }else if(numberIndex == 2 && (clicked_number == "+" || clicked_number == "-" || clicked_number == "*")){
-        operator = clicked_number 
-        document.getElementById("operator").innerHTML = clicked_number;
+    }else if(numberIndex == 2 && (number.textContent == "+" || number.textContent == "-" || number.textContent == "*")){
+        operator = number.textContent
+        document.getElementById("operator").innerHTML = number.textContent;
         numberIndex += 1
-        operator = clicked_number
+        operator =number.textContent
     }else if(numberIndex == 3){
-        secondNumber = clicked_number 
-        document.getElementById("secondNumber").innerHTML = clicked_number;
+        secondNumber = number.textContent 
+        document.getElementById("secondNumber").innerHTML = number.textContent;
         numberIndex += 1
     }else{
         alert("Please enter a valid operator")
     }
-}
+}))
 
 function calculate(){
     if(operator == "+"){

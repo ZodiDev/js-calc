@@ -7,14 +7,14 @@
 #submitBtn{
     width: 20vw;
     height: 5vh;
-    font-size: xx-large;
+    font-size: 1.5vw;
 }
 
 #clearBtn{
     height: 5vh;
     width: 10vw;
     margin-left: 10vw;
-    font-size: xx-large;
+    font-size: 1.5vw;
 }
 
 #container{
