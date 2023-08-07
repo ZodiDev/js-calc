@@ -1,66 +1,81 @@
-
-*{
-    font-size: 4vw;
-    text-align: center;
+body, html{
+    padding: 0;
+    margin: 0;
+    font-family: 'Rubik', sans-serif;
 }
 
-#submitBtn{
+.big-container{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.calculator-container{
+    padding: 0 1.2vw 0 1.2vw;
     width: 20vw;
-    height: 5vh;
-    font-size: 1.5vw;
-}
-
-#clearBtn{
-    height: 5vh;
-    width: 10vw;
-    margin-left: 10vw;
-    font-size: 1.5vw;
-}
-
-#container{
-    display: grid;
-    grid-template-columns: 10vw 10vw 10vw;
-    grid-template-rows: 11vh 13vh 13vh 13vh 7vh;
-}
-
-.number{
-    background-color: lightcyan;
-    border: 1px solid black;
-    display: flex;
+    height: 65vh;
+    background-color: gray;
+    display: inline-flex;
+    flex-wrap: wrap;
+    border-radius: 15%;
     justify-content: center;
     align-items: center;
-}
-
-#flex-container{
-    display: flex;
-    height: 98vh;
-    justify-content: center;
-    align-items: center;
+    box-shadow: 10px 10px 17px black;
 }
 
 .calculation{
+    width: 100%;
+    height: 25%;
     background-color: lightgray;
-    border: 1px solid black;
+    border-radius: 20%;
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
+    gap: 10px;
     align-items: center;
+    font-size: 6rem; 
+    flex-wrap: wrap;
+    overflow: hidden;
 }
 
-#secondNumber{
-    border-radius: 0 20px 0px 0px ;
+.numbers-container{
+    width: 80%;
+    gap: 20px;
+    justify-content: space-evenly;
+    align-items: center;
+    display: grid;
+    grid-template-columns: 4vw 4vw 4vw 4vw;
+    grid-template-rows: 4vw 4vw 4vw 4vw;
+}   
+
+.numbers{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    border-radius: 50%;
+    text-align: center;
+    color: white;
+    font-size: 3rem;
+    cursor: pointer;
+
 }
 
-#firstNumber{
-    border-radius: 20px 0px 0px 0px ;
+#remove-input{
+    border-radius: 15%;
+    width: 340%;
 }
 
-
-#submitBtn{
-    border-radius: 0px 0px 0px 20px ;
-    border: 1px solid  black;
+.result-numbers{
+    visibility: hidden;
+    max-width: 100%;
+    max-height: 100%;
+    white-space: nowrap; 
+    overflow: hidden;
 }
 
-#clearBtn{
-    border-radius: 0px 0px 20px 0px ;
-    border: 1px solid  black;
+.numbers:hover{
+    background-color: #262626;
 }
